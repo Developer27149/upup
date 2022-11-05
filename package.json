@@ -1,0 +1,39 @@
+{
+  "name": "upup",
+  "version": "1.0.0",
+  "description": "快速上传音乐到网易云盘",
+  "repository": "git@github.com:Developer27149/upup.git",
+  "author": "Developer27149 <564151947@qq.com>",
+  "license": "MIT",
+  "private": false,
+  "main": "./bin/index.js",
+  "bin": {
+    "upup": "./bin/index.js"
+  },
+  "scripts": {
+    "dev": "nodemon --watch 'src/**/*.ts' --exec 'ts-node' src/index.ts",
+    "dev:windows": "nodemon --watch 'src/**/*.ts' --exec \"npx ts-node\" src/index.ts",
+    "refresh": "rimraf ./node_modules ./package-lock.json && yarn",
+    "create": "yarn build && yarn test",
+    "test": "echo 'no test'",
+    "build": "tsc -p ."
+  },
+  "dependencies": {
+    "clear": "^0.1.0",
+    "commander": "^9.4.1",
+    "figlet": "^1.5.2",
+    "kleur": "^4.1.5"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "eslint": "^8.0.1",
+    "eslint-config-standard-with-typescript": "^23.0.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.8.4"
+  }
+}
